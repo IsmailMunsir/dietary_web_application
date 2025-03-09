@@ -17,6 +17,7 @@ const Navbar: React.FC = () => {
       </div>
       <div className="navbar-links">
         <Link to="/home">Home</Link>
+        <Link to="/health-form">HealthForm</Link> {/* Corrected link */}
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
         <button className="btn" onClick={handleLogout}>
