@@ -1,6 +1,18 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const ChoosePlan: React.FC = () => {
+  const handleSelectPlan = (planName: string) => {
+    toast.success(`You have selected the ${planName} plan!`, {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+  };
+
   return (
     <div className="choose-plan-container">
       <div className="choose-plan-card">
@@ -21,7 +33,12 @@ const ChoosePlan: React.FC = () => {
               <li>❌ Advanced analytics</li>
               <li>❌ Personalized meal plans</li>
             </ul>
-            <button className="plan-select-btn">Select Plan</button>
+            <button
+              className="plan-select-btn"
+              onClick={() => handleSelectPlan('Basic')}
+            >
+              Select Plan
+            </button>
             <p className="plan-note">7-day free trial available</p>
           </div>
 
@@ -38,7 +55,12 @@ const ChoosePlan: React.FC = () => {
               <li>✅ Personalized meal plans</li>
               <li>❌ 1-on-1 dietitian support</li>
             </ul>
-            <button className="plan-select-btn">Select Plan</button>
+            <button
+              className="plan-select-btn"
+              onClick={() => handleSelectPlan('Pro')}
+            >
+              Select Plan
+            </button>
             <p className="plan-note">14-day free trial available</p>
           </div>
 
@@ -54,7 +76,12 @@ const ChoosePlan: React.FC = () => {
               <li>✅ Personalized meal plans</li>
               <li>✅ 1-on-1 dietitian support</li>
             </ul>
-            <button className="plan-select-btn">Select Plan</button>
+            <button
+              className="plan-select-btn"
+              onClick={() => handleSelectPlan('Premium')}
+            >
+              Select Plan
+            </button>
             <p className="plan-note">30-day free trial available</p>
           </div>
         </div>
