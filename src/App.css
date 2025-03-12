@@ -1,14 +1,199 @@
 /* Global Styles */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: #f4f4f4;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #6a11cb;
+  color: white;
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-links .btn {
+  padding: 5px 10px;
+  background: #2575fc;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-links .btn:hover {
+  background: #1a5bbf;
+}
+
+/* Content Styles */
+.content {
+  padding: 20px;
+  min-height: 80vh;
+}
+
+/* Home Page Styles */
+.home {
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  padding: 10px 20px;
+  background: white;
+  color: #6a11cb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background: #f4f4f4;
+}
+
+.features {
+  padding: 50px 20px;
+  background: white;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.testimonials {
+  padding: 50px 20px;
+  background: #f4f4f4;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.testimonial {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer Styles */
+.footer {
+  background: #6a11cb;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 0.8rem;
 }
 
 /* Auth Container */
@@ -205,4 +390,139 @@ body {
 .select:focus {
   border-color: #6a11cb;
   outline: none;
+}
+/* Health Form Container */
+.health-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  padding: 20px;
+}
+
+/* Health Form Card */
+.health-form-card {
+  background: rgba(255, 255, 255, 0.85); /* Glassmorphism Effect */
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Title */
+.health-form-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+/* Form Group */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/* Floating Labels */
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #777;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  background: white;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+/* Input Fields */
+.form-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  background: white;
+  color: #333;
+  outline: none;
+}
+
+/* Input Focus Effect */
+.form-input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 4px 10px rgba(106, 17, 203, 0.3);
+  outline: none;
+}
+
+/* Floating Label Animation */
+.form-input:focus + label,
+.form-input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #6a11cb;
+  padding: 0 5px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(106, 17, 203, 0.4);
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .health-form-card {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .form-input {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+  }
 }
