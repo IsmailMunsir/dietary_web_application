@@ -1,6 +1,7 @@
-// src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import Home from './components/Home';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
           </Routes>
         </div>
         <Footer />
+        <ToastContainer /> {/* Add this line for toast notifications */}
       </div>
     </Router>
   );
